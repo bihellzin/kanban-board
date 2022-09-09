@@ -1,0 +1,20 @@
+:host(.board) {
+  display: flex;
+  column-gap: 30px;
+
+  & > .column {
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    padding: 10px;
+
+    & > .card {
+      padding: 10px;
+    }
+    & > p {
+      margin-block-end: 0;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<ng-container *ngIf="!isInEditMode">
+  <p>{{title}}</p>
+  <p>{{content}}</p>
+</ng-container>
+<form *ngIf="isInEditMode"
+  (ngSubmit)="onSubmit()" [formGroup]="editForm">
+  <div>
+    <input type="text" formControlName="title">
+  </div>
+  <div>
+    <textarea cols="20" rows="5" formControlName="content"></textarea>
+  </div>
+  <button type="submit">submit</button>
+</form>
+<div class="buttons">
+    <p (click)="leftArrowClick()"
+      *ngIf="showLeftArrow"><-</p>
+    <p (click)="rightArrowClick()"
+      *ngIf="showRightArrow">-></p>
+    <p (click)="deleteCard()">X</p>
+    <p (click)="changeMode()">{{editionButtonLabel}}</p>
+</div>

@@ -1,0 +1,48 @@
+<ng-container>
+  <div class="column">
+    <h4>new card</h4>
+    <form
+      (ngSubmit)="onSubmitCreateCardForm()" [formGroup]="createCardForm">
+      <div>
+        <input type="text" formControlName="title">
+      </div>
+      <div>
+        <textarea cols="20" rows="5" formControlName="content"></textarea>
+      </div>
+      <button type="submit">submit</button>
+    </form>
+  </div>
+  <div class="column">
+    <h4>todo</h4>
+    <ng-container *ngFor="let card of toDoCards">
+      <kanban-card [title]="card.titulo"
+      [content]="card.conteudo"
+      [id]="card.id"
+      [list]="card.lista"
+      (changeListEvent)="changeCardList($event)"
+      (deleteCardEvent)="deleteCard($event)"></kanban-card>
+    </ng-container>
+  </div>
+  <div class="column">
+    <h4>doing</h4>
+    <ng-container *ngFor="let card of doingCards">
+      <kanban-card [title]="card.titulo"
+      [content]="card.conteudo"
+      [id]="card.id"
+      [list]="card.lista"
+      (changeListEvent)="changeCardList($event)"
+      (deleteCardEvent)="deleteCard($event)"></kanban-card>
+    </ng-container>
+  </div>
+  <div class="column">
+    <h4>done</h4>
+    <ng-container *ngFor="let card of doneCards">
+      <kanban-card [title]="card.titulo"
+      [content]="card.conteudo"
+      [id]="card.id"
+      [list]="card.lista"
+      (changeListEvent)="changeCardList($event)"
+      (deleteCardEvent)="deleteCard($event)"></kanban-card>
+    </ng-container>
+  </div>
+</ng-container>
