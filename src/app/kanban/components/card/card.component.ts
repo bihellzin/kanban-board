@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ChangeListEvent, ICard, List } from '../../models';
 import { CardsService } from '../../services';
 
-enum Mode {
+export enum Mode {
   edit = 'edit',
   view = 'view'
 }
