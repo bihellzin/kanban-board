@@ -1,22 +1,36 @@
-<ng-container *ngIf="!isInEditMode">
-  <p>{{title}}</p>
-  <p>{{content}}</p>
-</ng-container>
-<form *ngIf="isInEditMode"
-  (ngSubmit)="onSubmit()" [formGroup]="editForm">
-  <div>
-    <input type="text" formControlName="title">
-  </div>
-  <div>
-    <textarea cols="20" rows="5" formControlName="content"></textarea>
-  </div>
-  <button type="submit">submit</button>
-</form>
-<div class="buttons">
-    <p (click)="leftArrowClick()"
-      *ngIf="showLeftArrow"><-</p>
-    <p (click)="rightArrowClick()"
-      *ngIf="showRightArrow">-></p>
-    <p (click)="deleteCard()">X</p>
-    <p (click)="changeMode()">{{editionButtonLabel}}</p>
+<div class="card">
+  <ng-container *ngIf="!isInEditMode">
+    <p class="title">{{title}}</p>
+    <p class="content">{{content}}</p>
+
+    <div class="buttons">
+      <img src="assets/icons/expand-button.png"
+        class="left-arrow button"
+        (click)="leftArrowClick()"
+        *ngIf="showLeftArrow" />
+      <img src="assets/icons/expand-button.png"
+        class="right-arrow button"
+        (click)="rightArrowClick()"
+        *ngIf="showRightArrow" />
+      <img src="assets/icons/trash.png"
+        class="button trash"
+        (click)="deleteCard()" />
+      <img src="assets/icons/underline-button.png"
+        class="button edit"
+        (click)="changeMode()" />
+    </div>
+  </ng-container>
+  <ng-container *ngIf="isInEditMode">
+    <form class="form"
+      (ngSubmit)="onSubmit()" [formGroup]="editForm">
+      <input class="title" type="text" formControlName="title">
+      <textarea class="content" cols="20" rows="5" formControlName="content"></textarea>
+      <button class="submit" type="submit">update</button>
+    </form>
+    <div class="buttons buttons--edit">
+      <img src="assets/icons/rounded-block-sign.png"
+        class="button cancel"
+        (click)="changeMode()" />
+    </div>
+  </ng-container>
 </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { AppService } from './app.service';
 
 @Component({
@@ -8,8 +7,6 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ada';
-
   constructor(
     private appService: AppService
   ) {}

@@ -1,19 +1,15 @@
 <ng-container>
   <div class="column">
-    <h4>new card</h4>
-    <form
+    <h4 class="column__title">new card</h4>
+    <form class="form"
       (ngSubmit)="onSubmitCreateCardForm()" [formGroup]="createCardForm">
-      <div>
-        <input type="text" formControlName="title">
-      </div>
-      <div>
-        <textarea cols="20" rows="5" formControlName="content"></textarea>
-      </div>
-      <button type="submit">submit</button>
+      <input class="title" placeholder="Title" type="text" formControlName="title">
+      <textarea class="content" placeholder="Content" formControlName="content"></textarea>
+      <button class="submit" type="submit">submit</button>
     </form>
   </div>
   <div class="column">
-    <h4>todo</h4>
+    <h4 class="column__title">to do</h4>
     <ng-container *ngFor="let card of toDoCards">
       <kanban-card [title]="card.titulo"
       [content]="card.conteudo"
@@ -24,7 +20,7 @@
     </ng-container>
   </div>
   <div class="column">
-    <h4>doing</h4>
+    <h4 class="column__title">doing</h4>
     <ng-container *ngFor="let card of doingCards">
       <kanban-card [title]="card.titulo"
       [content]="card.conteudo"
@@ -35,7 +31,7 @@
     </ng-container>
   </div>
   <div class="column">
-    <h4>done</h4>
+    <h4 class="column__title">done</h4>
     <ng-container *ngFor="let card of doneCards">
       <kanban-card [title]="card.titulo"
       [content]="card.conteudo"
