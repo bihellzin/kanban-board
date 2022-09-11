@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CardsService } from '../../services';
+import { cardsServiceMock } from '../../services/cards/cards-service.mock';
 
 import { BoardComponent } from './board.component';
 
@@ -8,7 +10,8 @@ describe('BoardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BoardComponent ]
+      declarations: [ BoardComponent ],
+      providers: [{ provide: CardsService, useValue: cardsServiceMock }]
     })
     .compileComponents();
 
