@@ -78,8 +78,17 @@
         font-weight: 700;
         letter-spacing: 1px;
         font-size: 0.8em;
+
         &:hover {
           background-color: #d6d6d6;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+
+          &:hover {
+            background-color: inherit;
+          }
         }
       }
 
