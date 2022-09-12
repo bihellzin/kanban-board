@@ -1,7 +1,7 @@
 <div class="card">
   <ng-container *ngIf="!isInEditMode">
-    <p class="title">{{title}}</p>
-    <p class="content">{{content}}</p>
+    <p class="card__title">{{title}}</p>
+    <p class="card__content">{{content}}</p>
 
     <div class="buttons">
       <img src="assets/icons/expand-button.png"
@@ -23,11 +23,11 @@
   <ng-container *ngIf="isInEditMode">
     <form class="form"
       (ngSubmit)="onSubmit()" [formGroup]="editForm">
-      <input class="title" type="text" formControlName="title">
-      <textarea class="content" cols="20" rows="5" formControlName="content"></textarea>
-      <button class="submit" type="submit">update</button>
+      <input class="form__title" type="text" formControlName="title">
+      <textarea class="form__content" cols="20" rows="5" formControlName="content"></textarea>
+      <button class="form__submit" type="submit">update</button>
     </form>
-    <div class="buttons buttons--edit">
+    <div class="buttons">
       <img src="assets/icons/rounded-block-sign.png"
         class="button cancel"
         (click)="changeMode()" />

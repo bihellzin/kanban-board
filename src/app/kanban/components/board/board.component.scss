@@ -23,66 +23,66 @@
       letter-spacing: 1px;
       font-weight: 700;
     }
-  }
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-
-    & > .title {
-      width: 100%;
-      height: 30px;
-      padding: 15px 10px 15px 8px;
-      font-size: 1em;
-      outline: none;
-      appearance: none;
-      border-style: unset;
+    & > .form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      background-color: #fff;
+      padding: 10px;
       border-radius: 5px;
-      border: 1px solid #d6d6d6;
-      transition: 0.3s;
-    }
+      filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
 
-    & > .title:focus {
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
+      & > .form__title {
+        width: 100%;
+        height: 30px;
+        padding: 15px 10px 15px 8px;
+        font-size: 1em;
+        outline: none;
+        appearance: none;
+        border-style: unset;
+        border-radius: 5px;
+        border: 1px solid #d6d6d6;
+        transition: 0.3s;
 
-    & > .content {
-      width: 100%;
-      resize: vertical;
-      padding: 10px 10px 15px 8px;
-      font-size: 1em;
-      outline: none;
-      appearance: none;
-      border-style: unset;
-      border-radius: 5px;
-      border: 1px solid #d6d6d6;
-      transition: 0.3s;
-      height: 100px;
-    }
+        &:focus {
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+      }
 
-    & > .content:focus {
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
+      & > .form__content {
+        width: 100%;
+        resize: vertical;
+        padding: 10px 10px 15px 8px;
+        font-size: 1em;
+        outline: none;
+        appearance: none;
+        border-style: unset;
+        border-radius: 5px;
+        border: 1px solid #d6d6d6;
+        transition: 0.3s;
+        height: 100px;
 
-    & > .submit {
-      border-style: none;
-      border-radius: 5px;
-      height: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 0.8em;
-    }
+        &:focus {
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+      }
 
-    & > .submit:hover {
-      background-color: #d6d6d6;
+      & > .form__submit {
+        border-style: none;
+        border-radius: 5px;
+        height: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 0.8em;
+        &:hover {
+          background-color: #d6d6d6;
+        }
+      }
+
     }
   }
 

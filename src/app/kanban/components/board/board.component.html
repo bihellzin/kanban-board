@@ -3,9 +3,9 @@
     <h4 class="column__title">new card</h4>
     <form class="form"
       (ngSubmit)="onSubmitCreateCardForm()" [formGroup]="createCardForm">
-      <input class="title" placeholder="Title" type="text" formControlName="title">
-      <textarea class="content" placeholder="Content" formControlName="content"></textarea>
-      <button class="submit" type="submit">create</button>
+      <input class="form__title" placeholder="Title" type="text" formControlName="title">
+      <textarea class="form__content" placeholder="Content" formControlName="content"></textarea>
+      <button class="form__submit" type="submit">create</button>
     </form>
   </div>
   <div class="column">
