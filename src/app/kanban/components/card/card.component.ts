@@ -27,7 +27,6 @@ export class CardComponent implements OnInit {
     content: new FormControl('', Validators.required)
   });
   currentMode = Mode.view;
-  editionButtonLabel = 'Edit';
 
   constructor(private cardsService: CardsService) { }
 
@@ -52,9 +51,6 @@ export class CardComponent implements OnInit {
     this.currentMode === Mode.view
       ? this.currentMode = Mode.edit
       : this.currentMode = Mode.view;
-    this.editionButtonLabel === 'Edit'
-      ? this.editionButtonLabel = 'Cancel'
-      : this.editionButtonLabel = 'Edit';
   }
 
   changeList(destination: List): void {

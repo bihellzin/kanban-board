@@ -36,7 +36,6 @@ describe('CardComponent', () => {
   it('should change mode', () => {
     component.changeMode();
     expect(component.currentMode).toEqual(Mode.edit);
-    expect(component.editionButtonLabel).toEqual('Cancel')
   });
 
   it('should return false to isInEditMode', () => {

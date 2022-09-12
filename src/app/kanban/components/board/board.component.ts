@@ -37,17 +37,11 @@ export class BoardComponent implements OnInit {
       .updateCard({ ...data.card, lista: data.destination})
       .subscribe(card => {
         if (data.origin === List.doing) {
-          this.doingCards = this.doingCards.filter(card => {
-            return card.id !== data.card.id
-          })
+          this.doingCards = this.doingCards.filter(card => card.id !== data.card.id);
         } else if (data.origin === List.done) {
-          this.doneCards = this.doneCards.filter(card => {
-            return card.id !== data.card.id
-          })
+          this.doneCards = this.doneCards.filter(card => card.id !== data.card.id);
         } else if (data.origin === List.todo) {
-          this.toDoCards = this.toDoCards.filter(card => {
-            return card.id !== data.card.id
-          })
+          this.toDoCards = this.toDoCards.filter(card => card.id !== data.card.id);
         }
 
         if (data.destination === List.doing) {
