@@ -23,9 +23,9 @@
   <ng-container *ngIf="isInEditMode">
     <form class="form"
       (ngSubmit)="onSubmit()" [formGroup]="editForm">
-      <input class="form__title" type="text" formControlName="title">
-      <textarea class="form__content" cols="20" rows="5" formControlName="content"></textarea>
-      <button class="form__submit" type="submit">update</button>
+      <input placeholder="Title" class="form__title" type="text" formControlName="title">
+      <textarea placeholder="Content" class="form__content" cols="20" rows="5" formControlName="content"></textarea>
+      <button [disabled]="!editForm.valid" class="form__submit" type="submit">update</button>
     </form>
     <div class="buttons">
       <img src="assets/icons/rounded-block-sign.png"
